@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intern_flutter/style/styles.dart';
 
-class MyBtn extends StatefulWidget {
-  const MyBtn({super.key});
+class MyBtn extends StatelessWidget {
+  final String text;
+  const MyBtn({super.key, required this.text});
 
-  @override
-  State<MyBtn> createState() => _MyBtnState();
-}
-
-class _MyBtnState extends State<MyBtn> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -18,7 +14,7 @@ class _MyBtnState extends State<MyBtn> {
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 56),
       ),
       child: Text(
-        'Button',
+        text,
         style: mediumTextStyle,
       ),
     );
