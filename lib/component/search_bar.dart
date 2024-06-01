@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
 class MySearchBar extends StatelessWidget {
-  const MySearchBar({super.key});
+  final String hint;
+  const MySearchBar({super.key, required this.hint});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 40),
-      decoration: InputDecoration(label: 'hi'),
-      child: const TextField(),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      child: TextField(
+        decoration: InputDecoration(
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+          hintText: hint,
+        ),
+      ),
     );
   }
 }

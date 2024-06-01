@@ -7,7 +7,7 @@ class MyInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: TextField(
         decoration: InputDecoration(
           fillColor: Colors.grey[200],
