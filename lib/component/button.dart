@@ -15,7 +15,7 @@ class MyBtn extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: mediumTextStyle,
+        style: mediumTextStyle.copyWith(color: Colors.white),
       ),
     );
   }

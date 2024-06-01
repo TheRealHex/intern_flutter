@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-class MyRadioBtn extends StatefulWidget {
-  final String text;
-  const MyRadioBtn({
-    super.key,
-    required this.text,
-  });
+class MyRadio extends StatelessWidget {
+  final String title;
+  final int value;
+  final int? groupValue;
+  final ValueChanged<int?> onChanged;
+  const MyRadio(
+      {super.key,
+      required this.value,
+      required this.groupValue,
+      required this.onChanged,
+      required this.title});
 
-  @override
-  State<MyRadioBtn> createState() => _MyRadioBtnState();
-}
-
-class _MyRadioBtnState extends State<MyRadioBtn> {
   @override
   Widget build(BuildContext context) {
     return RadioListTile(
-      title: Text(widget.text),
-      value: false,
-      groupValue: false,
-      onChanged: (_) {},
+      title: Text(title),
+      value: value,
+      groupValue: groupValue,
+      onChanged: onChanged,
     );
   }
 }
